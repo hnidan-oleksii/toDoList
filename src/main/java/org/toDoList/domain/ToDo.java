@@ -1,7 +1,5 @@
 package org.toDoList.domain;
 
-import org.toDoList.domain.data.Task;
-
 import java.time.LocalDate;
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package org.toDoList.domain.data;
+package org.toDoList.domain;
 
 import java.time.LocalDate;
 
-public record Task(boolean isComplete, String name, String notes, LocalDate date, Priority priority) {
+public record Task(boolean isComplete, String name, String notes, LocalDate date, Priority priority){
 
     public enum Priority {
         HIGH("high"), MEDIUM("medium"), LOW("low");

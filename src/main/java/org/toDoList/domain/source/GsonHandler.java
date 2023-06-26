@@ -1,4 +1,6 @@
-package org.toDoList.domain.data;
+package org.toDoList.domain.source;
+
+import org.toDoList.domain.Task;
 
 import java.util.List;
 
