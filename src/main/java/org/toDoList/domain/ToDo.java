@@ -2,7 +2,6 @@ package org.toDoList.domain;
 
 import org.toDoList.domain.data.Task;
 
-import java.util.Collections;
 import java.util.List;
 
 public class ToDo {
@@ -29,8 +28,10 @@ public class ToDo {
 
     }
 
-    public List<Task> searchByName(List<Task> tasks) {
-        return null;
+    public List<Task> searchByName(List<Task> tasks, String requestText) {
+        return tasks.stream()
+                .filter(task -> task.name().contains(requestText))
+                .toList();
     }
 
 
