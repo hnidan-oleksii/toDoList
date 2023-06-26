@@ -5,14 +5,7 @@ import org.toDoList.domain.data.Task;
 import java.util.List;
 
 public class ToDo {
-    private int taskNumber = 0;
-
-    private Task returnTaskById(List<Task> tasks, int id) {
-        return tasks.stream().filter(task -> id == task.id()).findFirst().orElse(null);
-    }
-
     public void addTask(List<Task> tasks, Task task) {
-        taskNumber++;
         tasks.add(task);
     }
 
@@ -39,15 +32,7 @@ public class ToDo {
         tasks.sort(new NameCompare());
     }
 
-    public void sortByDate(List<Task> tasks){
+    public void sortByDate(List<Task> tasks) {
         tasks.sort(new DateCompare());
-    }
-
-    public void sortById(List<Task> tasks){
-        tasks.sort(new IdCompare());
-    }
-
-    public int getTaskNumber() {
-        return taskNumber;
     }
 }
