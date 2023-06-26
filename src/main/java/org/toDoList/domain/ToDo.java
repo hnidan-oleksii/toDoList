@@ -17,8 +17,8 @@ public class ToDo {
 
     }
 
-    public void delete(List<Task> tasks) {
-
+    public void delete(List<Task> tasks, Task task) {
+        tasks.remove(task);
     }
 
     public List<Task> searchByName(List<Task> tasks, String requestText) {
