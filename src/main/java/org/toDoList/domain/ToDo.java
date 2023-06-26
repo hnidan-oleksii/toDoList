@@ -24,7 +24,7 @@ public class ToDo {
 
     public List<Task> searchByName(List<Task> tasks, String requestText) {
         return tasks.stream()
-                .filter(task -> task.name().contains(requestText))
+                .filter(task -> task.name().toLowerCase().contains(requestText.toLowerCase()))
                 .toList();
     }
 
