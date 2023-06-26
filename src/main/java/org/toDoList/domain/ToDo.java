@@ -14,7 +14,8 @@ public class ToDo {
     }
 
     public void markTaskCompleted(List<Task> tasks, Task task) {
-
+        Task completedTask = new Task(true, task.name(), task.notes(), task.date(), task.priority());
+        tasks.set(tasks.indexOf(task), completedTask);
     }
 
     public void delete(List<Task> tasks, Task task) {
