@@ -4,51 +4,65 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class ToDo {
-    public void addTask(List<Task> tasks, Task task) {
+    private final List<Task> tasks;
+
+    public ToDo(List<Task> tasks) {
+        this.tasks = tasks;
+    }
+
+    public Task getTask(int id) throws IndexOutOfBoundsException {
+        return tasks.get(id);
+    }
+
+    public void addTask(Task task) {
         tasks.add(task);
     }
 
-    public void editName(List<Task> tasks, Task task, String newName) {
+    public void replaceWithEditedName(Task task, String newName) {
         Task editedTask = new Task(task.isComplete(), newName, task.notes(), task.date(), task.priority());
         tasks.set(tasks.indexOf(task), editedTask);
     }
 
-    public void editNotes(List<Task> tasks, Task task, String newNotes) {
+    public void replaceWithEditedNoes(Task task, String newNotes) {
         Task editedTask = new Task(task.isComplete(), task.name(), newNotes, task.date(), task.priority());
         tasks.set(tasks.indexOf(task), editedTask);
     }
 
-    public void editDate(List<Task> tasks, Task task, LocalDate newDate) {
+    public void replaceWithEditedDate(Task task, LocalDate newDate) {
         Task editedTask = new Task(task.isComplete(), task.name(), task.notes(), newDate, task.priority());
         tasks.set(tasks.indexOf(task), editedTask);
     }
 
-    public void editPriority(List<Task> tasks, Task task, Task.Priority newPriority) {
+    public void replaceWithEditedPriority(Task task, Task.Priority newPriority) {
         Task editedTask = new Task(task.isComplete(), task.name(), task.notes(), task.date(), newPriority);
         tasks.set(tasks.indexOf(task), editedTask);
     }
 
-    public void markTaskCompleted(List<Task> tasks, Task task) {
+    public void markTaskCompleted(Task task) {
         Task completedTask = new Task(true, task.name(), task.notes(), task.date(), task.priority());
         tasks.set(tasks.indexOf(task), completedTask);
     }
 
-    public void delete(List<Task> tasks, Task task) {
+    public void delete(Task task) {
         tasks.remove(task);
     }
 
-    public List<Task> searchByName(List<Task> tasks, String requestText) {
+    public List<Task> searchByName(String requestText) {
         return tasks.stream()
                 .filter(task -> task.name().toLowerCase().contains(requestText.toLowerCase()))
                 .toList();
     }
 
 
-    public void sortByName(List<Task> tasks) {
+    public void sortByName() {
         tasks.sort(new NameCompare());
     }
 
-    public void sortByDate(List<Task> tasks) {
+    public void sortByDate() {
         tasks.sort(new DateCompare());
+    }
+
+    public List<Task> getTasks() {
+        return tasks;
     }
 }
