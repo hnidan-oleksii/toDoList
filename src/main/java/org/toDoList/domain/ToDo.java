@@ -19,27 +19,27 @@ public class ToDo {
     }
 
     public void replaceWithEditedName(Task task, String newName) {
-        Task editedTask = new Task(task.isComplete(), newName, task.notes(), task.date(), task.priority());
+        Task editedTask = new Task(task.isComplete(), newName, task.priority(), task.date(), task.notes());
         tasks.set(tasks.indexOf(task), editedTask);
     }
 
     public void replaceWithEditedNoes(Task task, String newNotes) {
-        Task editedTask = new Task(task.isComplete(), task.name(), newNotes, task.date(), task.priority());
+        Task editedTask = new Task(task.isComplete(), task.name(), task.priority(), task.date(), newNotes);
         tasks.set(tasks.indexOf(task), editedTask);
     }
 
     public void replaceWithEditedDate(Task task, LocalDate newDate) {
-        Task editedTask = new Task(task.isComplete(), task.name(), task.notes(), newDate, task.priority());
+        Task editedTask = new Task(task.isComplete(), task.name(), task.priority(), newDate, task.notes());
         tasks.set(tasks.indexOf(task), editedTask);
     }
 
     public void replaceWithEditedPriority(Task task, Task.Priority newPriority) {
-        Task editedTask = new Task(task.isComplete(), task.name(), task.notes(), task.date(), newPriority);
+        Task editedTask = new Task(task.isComplete(), task.name(), newPriority, task.date(), task.notes());
         tasks.set(tasks.indexOf(task), editedTask);
     }
 
     public void markTaskCompleted(Task task) {
-        Task completedTask = new Task(true, task.name(), task.notes(), task.date(), task.priority());
+        Task completedTask = new Task(true, task.name(), task.priority(), task.date(), task.notes());
         tasks.set(tasks.indexOf(task), completedTask);
     }
 
