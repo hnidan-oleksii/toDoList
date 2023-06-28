@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="581ccbaa-74e8-4580-82cc-551a9360990b" name="Changes" comment="Implemented search by name">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="581ccbaa-74e8-4580-82cc-551a9360990b" name="Changes" comment="Created all necessary dependencies in Main.java and started infinite loop&#10;Deleted unnecessary deprecated Main.java class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/ToDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/ToDo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/Executor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +70,15 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="toDoList" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.toDoList.ui.Main" />
+      <module name="toDoList.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -85,6 +92,7 @@
       <workItem from="1687592407409" duration="5885000" />
       <workItem from="1687705485355" duration="25000" />
       <workItem from="1687763704763" duration="8952000" />
+      <workItem from="1687941879993" duration="1061000" />
     </task>
     <task id="LOCAL-00001" summary="Added README.md">
       <created>1687511296423</created>

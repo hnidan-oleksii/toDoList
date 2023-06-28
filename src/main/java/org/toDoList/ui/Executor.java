@@ -3,6 +3,7 @@ package org.toDoList.ui;
 import org.toDoList.domain.Task;
 import org.toDoList.domain.source.FileDataSource;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
@@ -68,6 +69,8 @@ public class Executor {
                 String taskToOutput = "| %-4s ".formatted(toDoUI.getTasks().indexOf(task) + 1) + task.toString();
                 if (task.isComplete()) {
                     System.out.println("\u001B[32m" + taskToOutput + "\u001B[0m");
+                } else if (task.date().isBefore(LocalDate.now())){
+                    System.out.println("\u001B[31m" + taskToOutput + "\u001B[0m");
                 } else {
                     System.out.println(taskToOutput);
                 }
