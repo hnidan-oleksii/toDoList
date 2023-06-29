@@ -11,7 +11,8 @@ import java.util.List;
 
 public class JsonDataSource implements FileDataSource{
     private final JsonHandler jsonHandler;
-    private final String path = new File("").getAbsolutePath() + "./src/main/java/org/toDoList/domain/source/tasks.json";
+    private final String path = new File("").getAbsolutePath() +
+            "./src/main/java/org/toDoList/domain/source/tasks.json";
 
     public JsonDataSource(JsonHandler jsonHandler) {
         this.jsonHandler = jsonHandler;

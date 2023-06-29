@@ -19,46 +19,53 @@ public class ToDo {
     }
 
     public void replaceWithEditedName(Task task, String newName) {
-        Task editedTask = new Task(task.isComplete(), newName, task.priority(), task.date(), task.notes());
+        Task editedTask = new Task(task.isComplete(), newName,
+                task.priority(), task.date(), task.notes());
         tasks.set(tasks.indexOf(task), editedTask);
     }
 
-    public void replaceWithEditedNoes(Task task, String newNotes) {
-        Task editedTask = new Task(task.isComplete(), task.name(), task.priority(), task.date(), newNotes);
+    public void replaceWithEditedNotes(Task task, String newNotes) {
+        Task editedTask = new Task(task.isComplete(), task.name(),
+                task.priority(), task.date(), newNotes);
         tasks.set(tasks.indexOf(task), editedTask);
     }
 
     public void replaceWithEditedDate(Task task, LocalDate newDate) {
-        Task editedTask = new Task(task.isComplete(), task.name(), task.priority(), newDate, task.notes());
+        Task editedTask = new Task(task.isComplete(), task.name(),
+                task.priority(), newDate, task.notes());
         tasks.set(tasks.indexOf(task), editedTask);
     }
 
     public void replaceWithEditedPriority(Task task, Task.Priority newPriority) {
-        Task editedTask = new Task(task.isComplete(), task.name(), newPriority, task.date(), task.notes());
+        Task editedTask = new Task(task.isComplete(), task.name(),
+                newPriority, task.date(), task.notes());
         tasks.set(tasks.indexOf(task), editedTask);
     }
 
     public void markTaskCompleted(Task task) {
-        Task completedTask = new Task(true, task.name(), task.priority(), task.date(), task.notes());
+        Task completedTask = new Task(true, task.name(),
+                task.priority(), task.date(), task.notes());
         tasks.set(tasks.indexOf(task), completedTask);
     }
 
-    public void delete(Task task) {
+    public void deleteTask(Task task) {
         tasks.remove(task);
     }
 
-    public List<Task> searchByName(String requestText) {
+    public List<Task> searchTasksByName(String requestText) {
         return tasks.stream()
-                .filter(task -> task.name().toLowerCase().contains(requestText.toLowerCase()))
+                .filter(task -> task.name().
+                        toLowerCase().
+                        contains(requestText.toLowerCase()))
                 .toList();
     }
 
 
-    public void sortByName() {
+    public void sortTasksByName() {
         tasks.sort(new NameCompare());
     }
 
-    public void sortByDate() {
+    public void sortTasksByDate() {
         tasks.sort(new DateCompare());
     }
 

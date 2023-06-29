@@ -15,9 +15,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
-                .registerTypeAdapter(LocalDate.class, new LocalDateAdapter()
-                ).
-                create();
+                .registerTypeAdapter(LocalDate.class, new LocalDateAdapter())
+                .create();
         JsonHandler gsonHandler = new GsonHandler(gson);
         FileDataSource jsonDataSource = new JsonDataSource(gsonHandler);
         List<Task> tasks = jsonDataSource.readFile();

@@ -30,6 +30,7 @@ public class Executor {
     private void commandHandler() {
         System.out.print("Enter the command: ");
         String command = scanner.nextLine().strip();
+
         switch (command) {
             case "help" -> System.out.println("""
                     To add new task, type "add"
@@ -58,15 +59,20 @@ public class Executor {
     }
 
     private void outputTasks(List<Task> tasksToOutput) {
-        String divider = "|" + "-".repeat(6) + "|" + "-".repeat(25) + "|" + "-".repeat(12) + "|" + "-".repeat(16) + "|" + "-".repeat(47) + "|";
+        String divider = "|" + "-".repeat(6) + "|" + "-".repeat(25)
+                + "|" + "-".repeat(12) + "|" + "-".repeat(16)
+                + "|" + "-".repeat(47) + "|";
 
         System.out.println("Current list of tasks: ");
         System.out.println(divider);
         System.out.format("| ID   | Task name               | Priority   | Deadline       | Notes " + " ".repeat(40) + "|\n");
         System.out.println(divider);
+
         if (tasksToOutput != null) {
             for (Task task : tasksToOutput) {
-                String taskToOutput = "| %-4s ".formatted(toDoUI.getTasks().indexOf(task) + 1) + task.toString();
+                String taskToOutput = "| %-4s ".formatted(toDoUI.getTasks().indexOf(task) + 1)
+                        + task.toString();
+
                 if (task.isComplete()) {
                     System.out.println("\u001B[32m" + taskToOutput + "\u001B[0m");
                 } else if (task.date().isBefore(LocalDate.now())){

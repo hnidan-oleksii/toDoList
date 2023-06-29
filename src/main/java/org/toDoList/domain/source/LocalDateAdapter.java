@@ -8,7 +8,8 @@ import java.time.format.DateTimeFormatter;
 
 public class LocalDateAdapter implements JsonSerializer<LocalDate>, JsonDeserializer<LocalDate> {
     @Override
-    public LocalDate deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
+    public LocalDate deserialize(JsonElement json, Type typeOfT,
+                                 JsonDeserializationContext context) throws JsonParseException {
         return LocalDate.parse(json.getAsString(), DateTimeFormatter.ofPattern("dd.MM.uuuu"));
     }
 

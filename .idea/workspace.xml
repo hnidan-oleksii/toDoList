@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="581ccbaa-74e8-4580-82cc-551a9360990b" name="Changes" comment="Created all necessary dependencies in Main.java and started infinite loop&#10;Deleted unnecessary deprecated Main.java class">
+    <list default="true" id="581ccbaa-74e8-4580-82cc-551a9360990b" name="Changes" comment="Made json file empty&#10;Implemented feature, that if deadline of task is before today's date, then task will be printed red">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/ToDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/ToDo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/source/JsonDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/source/JsonDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/source/LocalDateAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/source/LocalDateAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/Executor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/ToDoConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/ToDoConsole.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,21 +61,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="toDoList" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.toDoList.ui.Main" />
@@ -92,7 +102,8 @@
       <workItem from="1687592407409" duration="5885000" />
       <workItem from="1687705485355" duration="25000" />
       <workItem from="1687763704763" duration="8952000" />
-      <workItem from="1687941879993" duration="1061000" />
+      <workItem from="1687941879993" duration="15078000" />
+      <workItem from="1688033189042" duration="2755000" />
     </task>
     <task id="LOCAL-00001" summary="Added README.md">
       <created>1687511296423</created>
@@ -157,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687779005850</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Made json file empty&#10;Implemented feature, that if deadline of task is before today's date, then task will be printed red">
+      <created>1687943116489</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687943116489</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +202,7 @@
     <MESSAGE value="Implemented sorting by id, name and date. Changed id type from int to Integer" />
     <MESSAGE value="Implemented sorting by id, name and date using Comparator. Changed id type from int to Integer" />
     <MESSAGE value="Implemented search by name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented search by name" />
+    <MESSAGE value="Made json file empty&#10;Implemented feature, that if deadline of task is before today's date, then task will be printed red" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made json file empty&#10;Implemented feature, that if deadline of task is before today's date, then task will be printed red" />
   </component>
 </project>
