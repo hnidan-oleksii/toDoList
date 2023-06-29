@@ -74,9 +74,9 @@ public class Executor {
                         + task.toString();
 
                 if (task.isComplete()) {
-                    System.out.println("\u001B[32m" + taskToOutput + "\u001B[0m");
+                    System.out.println("\u001B[32m" + taskToOutput + "\u001B[0m");      /* green text */
                 } else if (task.date().isBefore(LocalDate.now())){
-                    System.out.println("\u001B[31m" + taskToOutput + "\u001B[0m");
+                    System.out.println("\u001B[31m" + taskToOutput + "\u001B[0m");      /* red text */
                 } else {
                     System.out.println(taskToOutput);
                 }

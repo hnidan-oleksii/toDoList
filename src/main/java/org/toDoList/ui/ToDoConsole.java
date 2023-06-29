@@ -40,6 +40,7 @@ public class ToDoConsole implements ToDoUI {
             return parsedDate.get();
         }
 
+        /* Everything about invalid input is printed yellow */
         System.out.println("\u001B[33m" + "You entered invalid date. Please enter the correct one." + "\u001B[0m");
         return setDate();
     }
@@ -68,10 +69,10 @@ public class ToDoConsole implements ToDoUI {
 
         System.out.println("\u001B[33m" +
                 """
-                You entered invalid priority.
-                Priority can be: low, medium or high.
-                Enter the correct one
-                """
+                        You entered invalid priority.
+                        Priority can be: low, medium or high.
+                        Enter the correct one
+                        """
                 + "\u001B[0m");
         return setPriority();
     }
@@ -84,6 +85,11 @@ public class ToDoConsole implements ToDoUI {
         }
     }
 
+    /*
+     * In editTask, deleteTask and markTaskCompleted input is taken not as
+     * scanner.nextInt() because if input is invalid, Exception will be caught,
+     * explaining user what should they input
+     */
     @Override
     public void editTask() {
         try {

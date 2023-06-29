@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="581ccbaa-74e8-4580-82cc-551a9360990b" name="Changes" comment="Formatted code for better readability">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/ToDoConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/ToDoConsole.java" afterDir="false" />
-    </list>
+    <list default="true" id="581ccbaa-74e8-4580-82cc-551a9360990b" name="Changes" comment="Added some comments" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +93,7 @@
       <workItem from="1687705485355" duration="25000" />
       <workItem from="1687763704763" duration="8952000" />
       <workItem from="1687941879993" duration="15078000" />
-      <workItem from="1688033189042" duration="5806000" />
+      <workItem from="1688033189042" duration="9469000" />
     </task>
     <task id="LOCAL-00001" summary="Added README.md">
       <created>1687511296423</created>
@@ -175,7 +172,28 @@
       <option name="project" value="LOCAL" />
       <updated>1688036065705</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Took validation of date and priority out of set methods">
+      <created>1688050230132</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1688050230132</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Used &quot;set&quot; methods for fields instead of passing unchecked String value">
+      <created>1688050350490</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688050350490</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added some comments">
+      <created>1688052535987</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1688052535987</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +222,9 @@
     <MESSAGE value="Implemented search by name" />
     <MESSAGE value="Made json file empty&#10;Implemented feature, that if deadline of task is before today's date, then task will be printed red" />
     <MESSAGE value="Formatted code for better readability" />
-    <option name="LAST_COMMIT_MESSAGE" value="Formatted code for better readability" />
+    <MESSAGE value="Took validation of date and priority out of set methods" />
+    <MESSAGE value="Used &quot;set&quot; methods for fields instead of passing unchecked String value" />
+    <MESSAGE value="Added some comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some comments" />
   </component>
 </project>
