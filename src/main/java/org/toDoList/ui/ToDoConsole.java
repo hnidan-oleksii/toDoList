@@ -94,14 +94,12 @@ public class ToDoConsole implements ToDoUI {
             System.out.print("Enter name of the field you'd like to edit( name / priority / date / notes ) or quit: ");
             String fieldToEdit = scanner.nextLine().strip();
 
-            System.out.print("Commit the changes: ");
-            String editedFieldContent = scanner.nextLine();
 
             switch (fieldToEdit) {
-                case "name" -> toDo.replaceWithEditedName(taskToEdit, editedFieldContent);
-                case "priority" -> toDo.replaceWithEditedPriority(taskToEdit, setPriority(editedFieldContent));
-                case "date" -> toDo.replaceWithEditedDate(taskToEdit, setDate(editedFieldContent));
-                case "notes" -> toDo.replaceWithEditedNotes(taskToEdit, editedFieldContent);
+                case "name" -> toDo.replaceWithEditedName(taskToEdit, setName());
+                case "priority" -> toDo.replaceWithEditedPriority(taskToEdit, setPriority());
+                case "date" -> toDo.replaceWithEditedDate(taskToEdit, setDate());
+                case "notes" -> toDo.replaceWithEditedNotes(taskToEdit, setNotes());
                 default -> System.out.println("\u001B[33m" + "Invalid field name. Enter the valid one" + "\u001B[0m");
             }
 
