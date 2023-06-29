@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="581ccbaa-74e8-4580-82cc-551a9360990b" name="Changes" comment="Made json file empty&#10;Implemented feature, that if deadline of task is before today's date, then task will be printed red">
+    <list default="true" id="581ccbaa-74e8-4580-82cc-551a9360990b" name="Changes" comment="Formatted code for better readability">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/ToDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/ToDo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/source/JsonDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/source/JsonDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/source/LocalDateAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/domain/source/LocalDateAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/Executor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/ToDoConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/toDoList/ui/ToDoConsole.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +59,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -103,7 +96,7 @@
       <workItem from="1687705485355" duration="25000" />
       <workItem from="1687763704763" duration="8952000" />
       <workItem from="1687941879993" duration="15078000" />
-      <workItem from="1688033189042" duration="2755000" />
+      <workItem from="1688033189042" duration="5806000" />
     </task>
     <task id="LOCAL-00001" summary="Added README.md">
       <created>1687511296423</created>
@@ -175,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687943116489</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Formatted code for better readability">
+      <created>1688036065704</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1688036065705</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +203,7 @@
     <MESSAGE value="Implemented sorting by id, name and date using Comparator. Changed id type from int to Integer" />
     <MESSAGE value="Implemented search by name" />
     <MESSAGE value="Made json file empty&#10;Implemented feature, that if deadline of task is before today's date, then task will be printed red" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made json file empty&#10;Implemented feature, that if deadline of task is before today's date, then task will be printed red" />
+    <MESSAGE value="Formatted code for better readability" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formatted code for better readability" />
   </component>
 </project>

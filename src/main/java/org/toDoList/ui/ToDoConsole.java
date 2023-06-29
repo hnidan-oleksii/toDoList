@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class ToDoConsole implements ToDoUI {
@@ -30,24 +31,24 @@ public class ToDoConsole implements ToDoUI {
     }
 
     private LocalDate setDate() {
+        String taskDate = scanner.nextLine();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
+
         System.out.print("Enter deadline of the task (dd.mm.yyyy): ");
-        try {
-            String taskDate = scanner.nextLine();
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
-            return LocalDate.parse(taskDate, formatter);
-        } catch (DateTimeParseException exception) {
-            System.out.println("\u001B[33m" + "You entered invalid date. Please enter the correct one." + "\u001B[0m");
-            return setDate();
+        Optional<LocalDate> parsedDate = Optional.ofNullable(validateDate(taskDate, formatter));
+        if (parsedDate.isPresent()) {
+            return parsedDate.get();
         }
+
+        System.out.println("\u001B[33m" + "You entered invalid date. Please enter the correct one." + "\u001B[0m");
+        return setDate();
     }
 
-    private LocalDate setDate(String taskDate) {
+    private LocalDate validateDate(String date, DateTimeFormatter formatter) {
         try {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
-            return LocalDate.parse(taskDate, formatter);
+            return LocalDate.parse(date, formatter);
         } catch (DateTimeParseException exception) {
-            System.out.println("\u001B[33m" + "You entered invalid date. Please enter the correct one." + "\u001B[0m");
-            return setDate();
+            return null;
         }
     }
 
@@ -57,35 +58,29 @@ public class ToDoConsole implements ToDoUI {
     }
 
     private Task.Priority setPriority() {
+        String taskPriority = scanner.nextLine();
+
         System.out.print("Enter priority of the task: ");
-        try {
-            String taskPriority = scanner.nextLine();
-            return Task.Priority.valueOf(taskPriority);
-        } catch (IllegalArgumentException exception) {
-            System.out.println("\u001B[33m" +
-                    """
-                    You entered invalid priority.
-                    Priority can be: low, medium or high.
-                    Enter the correct one
-                    """
-                    + "\u001B[0m");
-            return setPriority();
+        Optional<Task.Priority> parsedPriority = Optional.ofNullable(validatePriority(taskPriority));
+        if (parsedPriority.isPresent()) {
+            return parsedPriority.get();
         }
+
+        System.out.println("\u001B[33m" +
+                """
+                You entered invalid priority.
+                Priority can be: low, medium or high.
+                Enter the correct one
+                """
+                + "\u001B[0m");
+        return setPriority();
     }
 
-    private Task.Priority setPriority(String taskPriority) {
-        System.out.print("Enter priority of the task: ");
+    private Task.Priority validatePriority(String priority) {
         try {
-            return Task.Priority.valueOf(taskPriority);
+            return Task.Priority.valueOf(priority);
         } catch (IllegalArgumentException exception) {
-            System.out.println("\u001B[33m" +
-                    """
-                    You entered invalid priority.
-                    Priority can be: low, medium or high.
-                    Enter the correct one
-                    """
-                    + "\u001B[0m");
-            return setPriority();
+            return null;
         }
     }
 
