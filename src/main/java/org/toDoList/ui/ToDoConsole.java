@@ -31,10 +31,10 @@ public class ToDoConsole implements ToDoUI {
     }
 
     private LocalDate setDate() {
+        System.out.print("Enter deadline of the task (dd.mm.yyyy): ");
         String taskDate = scanner.nextLine();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
 
-        System.out.print("Enter deadline of the task (dd.mm.yyyy): ");
         Optional<LocalDate> parsedDate = Optional.ofNullable(validateDate(taskDate, formatter));
         if (parsedDate.isPresent()) {
             return parsedDate.get();
@@ -59,9 +59,9 @@ public class ToDoConsole implements ToDoUI {
     }
 
     private Task.Priority setPriority() {
+        System.out.print("Enter priority of the task: ");
         String taskPriority = scanner.nextLine();
 
-        System.out.print("Enter priority of the task: ");
         Optional<Task.Priority> parsedPriority = Optional.ofNullable(validatePriority(taskPriority));
         if (parsedPriority.isPresent()) {
             return parsedPriority.get();

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="581ccbaa-74e8-4580-82cc-551a9360990b" name="Changes" comment="Added some comments" />
+    <list default="true" id="581ccbaa-74e8-4580-82cc-551a9360990b" name="Changes" comment="Commented some moments">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,7 +95,7 @@
       <workItem from="1687705485355" duration="25000" />
       <workItem from="1687763704763" duration="8952000" />
       <workItem from="1687941879993" duration="15078000" />
-      <workItem from="1688033189042" duration="9469000" />
+      <workItem from="1688033189042" duration="10526000" />
     </task>
     <task id="LOCAL-00001" summary="Added README.md">
       <created>1687511296423</created>
@@ -193,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688052535987</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added some comments">
+      <created>1688054833868</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1688054833868</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +233,7 @@
     <MESSAGE value="Formatted code for better readability" />
     <MESSAGE value="Took validation of date and priority out of set methods" />
     <MESSAGE value="Used &quot;set&quot; methods for fields instead of passing unchecked String value" />
-    <MESSAGE value="Added some comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some comments" />
+    <MESSAGE value="Commented some moments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commented some moments" />
   </component>
 </project>
